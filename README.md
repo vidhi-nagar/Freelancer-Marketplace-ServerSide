@@ -65,6 +65,11 @@ http://localhost:5000
 
 Make sure `.env` file is NOT pushed to GitHub.
 
+## 🔗 Frontend Repository
+
+Frontend Repo:
+https://github.com/vidhi-nagar/Freelancer-Marketplace-ClientSide
+
 ## 👩‍💻 Author
 
 Vidhi  
