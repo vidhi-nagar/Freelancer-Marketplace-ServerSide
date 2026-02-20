@@ -21,7 +21,7 @@ const io = new Server(httpServer, {
   cors: {
     origin:
       process.env.CLIENT_URL ||
-      "https://freelancer-marketplace-client-side.vercel.app/",
+      "https://freelancer-marketplace-client-side.vercel.app",
     methods: ["GET", "POST"],
   },
 });
@@ -31,7 +31,7 @@ app.use(
   cors({
     origin:
       process.env.CLIENT_URL ||
-      "https://freelancer-marketplace-client-side.vercel.app/",
+      "https://freelancer-marketplace-client-side.vercel.app",
     credentials: true,
   }),
 );
