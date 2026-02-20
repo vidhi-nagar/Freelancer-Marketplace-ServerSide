@@ -19,13 +19,22 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin:
+      process.env.CLIENT_URL ||
+      "https://freelancer-marketplace-client-side.vercel.app/",
     methods: ["GET", "POST"],
   },
 });
 
 // Middleware
-app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173", credentials: true }));
+app.use(
+  cors({
+    origin:
+      process.env.CLIENT_URL ||
+      "https://freelancer-marketplace-client-side.vercel.app/",
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 // Routes
@@ -38,7 +47,9 @@ app.use("/api/users", userRoutes);
 app.use("/api/conversations", conversationRoutes);
 
 // Health check
-app.get("/", (req, res) => res.json({ message: "Freelance Marketplace API running ✅" }));
+app.get("/", (req, res) =>
+  res.json({ message: "Freelance Marketplace API running ✅" }),
+);
 
 // Error handler
 app.use((err, req, res, next) => {

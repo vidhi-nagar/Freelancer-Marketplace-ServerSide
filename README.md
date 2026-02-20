@@ -51,7 +51,7 @@ server/
    node index.js
 
 Server will run on:
-http://localhost:5000
+https://freelancer-marketplace-client-side.vercel.app/
 
 ## 🔐 Features
 
